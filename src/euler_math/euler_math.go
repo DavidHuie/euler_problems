@@ -31,6 +31,24 @@ func IsPrime(num int) bool {
 	return true
 }
 
+func SumOfSquares(num int) int {
+	sum := 0
+	for i := 1; i <= num; i++ {
+		sum += i * i
+	}
+
+	return sum
+}
+
+func SquareOfSum(num int) int {
+	sum := 0
+	for i := 1; i <= num; i++ {
+		sum += i
+	}
+
+	return sum * sum
+}
+
 // import "sync"
 // var wait_group sync.WaitGroup
 // wait_group.Add(1)
