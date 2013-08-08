@@ -8,16 +8,28 @@ type NumBool struct {
 }
 
 var prime_pairs []NumBool = []NumBool{
-	NumBool{3, true},
-	NumBool{499, true},
-	NumBool{3613, true},
-	NumBool{7459, true},
-	NumBool{2, true},
-	NumBool{100, false},
-	NumBool{120, false},
-	NumBool{500, false},
-	NumBool{3614, false},
-	NumBool{7460, false},
+	{3, true},
+	{499, true},
+	{3613, true},
+	{7459, true},
+	{2, true},
+	{100, false},
+	{120, false},
+	{500, false},
+	{3614, false},
+	{7460, false},
+	{9, false},
+	{63, false},
+	{123123123123, false},
+	{2971215073, true},
+	{19577194573, true},
+	{25209506681, true},
+	{63018038201, true},
+	{13091204281, true},
+	{6620830889, true},
+	{80630964769, true},
+	{6692367337, true},
+	{6692337123, false},
 }
 
 

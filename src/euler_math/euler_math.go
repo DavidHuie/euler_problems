@@ -22,16 +22,24 @@ func IsPrime(num int) bool {
 	if num == 2 {
 		return true
 	}
-
-	// Optimization
 	if num%2 == 0 {
 		return false
 	}
 
+	ch := make(chan bool, 1000000)
+
+	divisible := func(num int, d int, ch chan bool) {
+		ch <- (num%d == 0)
+	}
+
 	var max int = int(math.Sqrt(float64(num))) + 1
 
-	for i := 3; i < max; i++ {
-		if num%i == 0 {
+	for i := 3; i < max; i += 2 {
+		go divisible(num, i, ch)
+	}
+
+	for i := 3; i < max; i += 2 {
+		if <-ch {
 			return false
 		}
 	}
