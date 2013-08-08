@@ -16,13 +16,21 @@ func FibList(num uint) []uint {
 }
 
 func IsPrime(num int) bool {
+	if num == 1 {
+		return false
+	}
+	if num == 2 {
+		return true
+	}
+
+	// Optimization
 	if num%2 == 0 {
 		return false
 	}
 
 	var max int = int(math.Sqrt(float64(num))) + 1
 
-	for i := 2; i < max; i++ {
+	for i := 3; i < max; i++ {
 		if num%i == 0 {
 			return false
 		}

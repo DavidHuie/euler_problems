@@ -12,7 +12,7 @@ var prime_pairs []NumBool = []NumBool{
 	NumBool{499, true},
 	NumBool{3613, true},
 	NumBool{7459, true},
-	NumBool{2, false},
+	NumBool{2, true},
 	NumBool{100, false},
 	NumBool{120, false},
 	NumBool{500, false},
