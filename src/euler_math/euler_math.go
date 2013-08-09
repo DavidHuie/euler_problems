@@ -45,6 +45,8 @@ func IsPrime(num int) bool {
 		}
 	}
 
+	close(ch)
+
 	return true
 }
 
