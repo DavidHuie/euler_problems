@@ -109,6 +109,29 @@ func SquareOfSum(num int) int {
 	return sum * sum
 }
 
+func NextCollatz(n int) int {
+	if n%2 == 0 {
+		return n / 2
+	} else {
+		return 3*n + 1
+	}
+}
+
+func CollatzSequenceLength(n int) int {
+	length := 1
+
+	for {
+		n = NextCollatz(n)
+		length += 1
+
+		if n == 1 {
+			break
+		}
+	}
+
+	return length
+}
+
 // import "sync"
 // var wait_group sync.WaitGroup
 // wait_group.Add(1)
