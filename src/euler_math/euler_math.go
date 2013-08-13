@@ -132,6 +132,20 @@ func CollatzSequenceLength(n int) int {
 	return length
 }
 
+func SumOfDivisors(n int) int {
+	sum_divisors := 0
+	max_divisor := (n / 2) + 1
+
+	for i := 1; i <= max_divisor; i++ {
+		if n%i == 0 {
+			sum_divisors += i
+		}
+	}
+
+	return sum_divisors
+}
+
+
 // import "sync"
 // var wait_group sync.WaitGroup
 // wait_group.Add(1)
