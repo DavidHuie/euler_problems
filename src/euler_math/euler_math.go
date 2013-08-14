@@ -134,7 +134,7 @@ func CollatzSequenceLength(n int) int {
 
 func SumOfDivisors(n int) int {
 	sum_divisors := 0
-	max_divisor := (n / 2) + 1
+	max_divisor := n / 2
 
 	for i := 1; i <= max_divisor; i++ {
 		if n%i == 0 {
