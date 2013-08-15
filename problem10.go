@@ -1,7 +1,7 @@
 package main
 
 import "fmt"
-import "euler_math"
+import "./euler_math"
 
 func problem10() int {
 	num := 2000000

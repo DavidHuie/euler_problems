@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 import "math"
-import "euler_math"
+import "./euler_math"
 
 func problem3() int {
 	var largest_prime_factor int
